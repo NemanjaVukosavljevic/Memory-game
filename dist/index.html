@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../dist/output.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;0,800;1,200&display=swap" rel="stylesheet">
+    <title>Memory game</title>
+</head>
+<body class="font">
+    <div class=" welcome-div h-screen flex flex-col ">
+        <div class="h-[45%] w-screen flex justify-center items-center  mb-5">
+            <img src="./images/card-games.png" class="h-[20rem]" alt="card image">
+        </div>
+        <div class="h-[55%] w-screen flex flex-col justify-start items-center ">
+            <h1 class="text-4xl mb-5">
+                CHOOSE YOUR NAME
+            </h1>
+            <input id="nameInput" class="md:w-[30%] h-[4rem] rounded-md text-3xl text-center bg-gray-300 mb-10" type="text" name="name" id="nameInput" maxlength="15">
+            <button type="button" id="playButton" class="border w-[85%] md:w-[30%] h-[4rem] rounded-md text-3xl text-center text-white bg-red-400 hover:bg-red-600 transition-colors duration-300">PLAY</button>
+        </div>
+    </div>
+
+    <div class="hidden game-div flex flex-col md:flex-row">
+        <div class="h-[50%] w-screen md:h-screen md:w-[50%]">
+    
+            <div class="flex justify-between p-5">
+                <h1 class="p-2 font-bold text-xl">
+                    MEMORY GAME
+                </h1>
+    
+                <span id="counter" class="border py-2 px-5 rounded-md text-xl border-red-500">0</span>
+            </div>
+    
+            <div class="flex flex-col justify-center items-center">
+                <div class="flex justify-center items-center">
+                    <input id="gameUsername" class="md:w-full h-[4rem] rounded-md text-3xl text-center bg-gray-300 mb-10" type="text" name="name" id="nameInput" maxlength="15">
+                </div>
+                <div class="flex w-full flex-row justify-between px-3">
+                    <div>
+                        <input type="radio" class="mr-2" name="difficulty" id="" value="easy" checked>
+                        <label>Easy</label>
+                    </div>
+                    <div>
+                        <input type="radio" class="mr-2" name="difficulty" id="" value="medium">
+                        <label>Medium</label>
+                    </div>
+                    <div>
+                        <input type="radio" class="mr-2" name="difficulty" id="" value="hard">
+                        <label>Hard</label>
+                    </div>
+                    <div>
+                        <input type="radio" class="mr-2" name="difficulty" id="" value="expert">
+                        <label>Expert</label>
+                    </div>
+                </div>
+    
+                <div class="cardsDisplay pt-5 lg:w-[50%] flex items-center justify-center flex-wrap">
+                    
+                </div>
+            </div>
+        </div>
+    
+        <div class="h-auto flex flex-col w-screen md:h-screen md:w-[50%]">
+            <div class="flex flex-col md:flex-row lg:mr-2 text-2xl">
+                <div class="box-border md:w-[50%] flex flex-row p-5 lg:p-0 lg:py-5 lg:px-1">
+                    <button id="easyBtn" type="button" class="w-[50%] border border-yellow-500">Easy</button>
+                    <button id="mediumBtn" type="button" class="w-[50%] border ml-2 border-green-500">Medium</button>
+                </div>
+    
+                <div class="box-border md:w-[50%] flex flex-row p-5 lg:p-0 lg:py-5 lg:px-1">
+                    <button id="hardBtn" type="button" class="w-[50%] border border-blue-500">Hard</button>
+                    <button id="expertBtn" type="button" class="w-[50%] border ml-2 border-red-500">Expert</button>
+                </div>
+            </div>
+    
+            <div id="highScores" class="mt-5">
+
+            </div>
+        </div>
+    </div>
+
+    <script defer src="script.js"></script>
+</body>
+</html>
